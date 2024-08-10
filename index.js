@@ -15,7 +15,9 @@ const __dirname = path.dirname(__filename);
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "flux.html"));
 });
-
+app.get("/hello", (req, res) => {
+  res.send("Hello");
+});
 app.use(express.json()); // Parse JSON request bodies
 
 app.post("/generate", async (req, res) => {
