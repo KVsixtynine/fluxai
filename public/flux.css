@@ -1,0 +1,285 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url('/images/background.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+#fixedImg {
+  position: fixed;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(7px);
+  z-index: 1;
+}
+
+header {
+
+  width: 100%;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 8dvh;
+  z-index: 2;
+}
+
+
+
+header img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.settingBlock { 
+  height: 80%;
+  background: rgba(255,255,255,0.4);
+  border-radius: 10px;
+  backdrop-filter: blur(7px);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settingBlock div {
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.settingBlock button {
+  height: 2.5rem;
+  background: rgba(255,255,255,0.4) !important;
+  border-radius: 10px;
+  backdrop-filter: blur(7px);
+  color: black;
+}
+
+.settingBlock img {
+  width: 2rem !important;
+  height: 2rem;
+}
+
+main {
+  width: 100%;
+  height: 88dvh;
+  
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
+  padding: 10px;
+  z-index: 2;
+}
+
+.settings,
+.generated-image {
+  height: 88dvh;
+}
+
+.settings {
+  width: 30%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  border-radius: 10px 0 0 10px;
+  backdrop-filter: blur(7px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Elevation */
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  gap: 1rem; /* Spacing between elements */
+  font-size: 1.5rem;
+}
+
+p {
+  width: 100%;
+  font-size: 18px;
+}
+label {
+  width: 70%;
+
+}
+select {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5rem;
+  min-width: 5rem;
+  max-width: 8rem;
+  border-radius: 10px;
+}
+
+.settings > img {
+  max-width: 100%;
+  max-height: 40%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+} 
+
+.settings > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(7px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Elevation */
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  border-radius: 25px;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 25px;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+   border-radius: 25px;
+}
+
+
+.generatedIMGs {
+  width: 70%;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  backdrop-filter: blur(17px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Elevation */
+  overflow: hidden;
+
+
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+}
+
+
+.generated-image {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.generated-image img {
+  max-width: 90%;
+  max-height: 60%;
+  margin: 10px;
+}
+
+.generated-image p {
+  text-align: center;
+}
+
+
+
+
+
+
+footer {
+  width: 100%;
+  height: 4dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers the p element vertically */
+  z-index: 2;
+}
+
+footer > p {
+  width: 50%;
+  text-align: center;
+  display: flex; /* Make p a flex container */
+  align-items: center; /* Center text vertically within p */
+  justify-content: center;
+}
+

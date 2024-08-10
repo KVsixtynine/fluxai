@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="flux.css" />
+    <title>Flux Image Generate</title>
+  </head>
+  <body>
+    <div id="fixedImg"></div>
+    <header>
+      <img src="images/logo.png" alt="Flux Image Generate" />
+
+      <h1>AImaGen</h1>
+
+      <div class="settingBlock">
+        <div>KV</div>
+        <button>100 Credits</button>
+        <img src="/images/settings.svg" />
+      </div>
+    </header>
+    <main>
+      <div class="settings">
+        <img src="/images/enter.png" alt="please enter your prompt" />
+        <form>
+          <textarea
+            type="text"
+            id="promptInput"
+            name="prompt"
+            placeholder="Enter your prompt"
+          ></textarea>
+          <br />
+          <button type="submit">Generate</button>
+        </form>
+        <div>
+          <label for="ratio">Aspect Ratio</label>
+          <select id="ratio">
+            <option value="1:1">1:1</option>
+            <option value="16:9">16:9</option>
+            <option value="21:9">21:9</option>
+            <option value="2:3">2:3</option>
+             
+            <option value="3:2">3:2</option>
+            <option value="4:5">4:5</option>
+            <option value="5:4">5:4</option>
+            <option value="9:16">9:16</option>
+            <option value="9:21">9:21</option>
+          </select>
+        </div>
+        <div>
+          <label for="numsImg">Number of Output</label>
+          <select id="numsImg">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div>
+          <label for="typeImg">Output Format</label>
+          <select id="typeImg">
+            <option value="webp">webp</option>
+            <option value="png">png</option>
+            <option value="jpg">jpg</option>
+          </select>
+        </div>
+
+        <span id="seedValue">Seed: </span>
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="0"
+            max="2147483647"
+            value="0"
+            class="slider"
+            id="myRange"
+          />
+        </div>
+      </div>
+      <div class="generatedIMGs">
+        <div id="container">
+          <div class="generated-image">
+            <img src="/images/enter.png" />
+          </div>
+          <div class="generated-image">
+            <img src="/images/enter.png" />
+          </div>
+        </div>
+        
+      </div>
+    </main>
+    <footer>
+      <p>&copy; AImaGen 2024</p>
+    </footer>
+    <script src="flux.js"></script>
+  </body>
+</html>
