@@ -1,6 +1,6 @@
 // Image handle
 const apiBaseUrl =
-  "https://fluxai.vercel.app";
+  "https://fluxai-qqxjie3ar-kenvins-projects-844bf128.vercel.app";
 const form = document.querySelector("form");
 const prompt = document.querySelector('textarea[type="text"]');
 const ratio = document.querySelector("#ratio");
